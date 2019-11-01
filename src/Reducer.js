@@ -61,7 +61,7 @@ const styles = {
       });
     }
 
-  render() {
+  render() { 
         //2. Reducer - State 
         // - Action
         const reducer = function(state, action) {
