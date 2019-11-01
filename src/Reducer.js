@@ -86,7 +86,7 @@ const styles = {
 
       //function callDispatch(){
         //4. Dispatch (take action)
-        //console.log('in dispatch')
+        console.log('in dispatch ')
         switch(this.state.attack) {
           case "ATTACK":
             store.dispatch({type: "ATTACK", payload: "Iron Man"})
