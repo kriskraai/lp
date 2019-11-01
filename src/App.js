@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ReduxExp from './Reducer'
+import Attack from './Attack'
 
 function App() {
   // const options = [
@@ -17,7 +17,7 @@ function App() {
       <header className="App-header">
         {/* <MyComponent/> */}
         <p>
-          <ReduxExp/>
+          <Attack/>
         </p>
 
       </header>

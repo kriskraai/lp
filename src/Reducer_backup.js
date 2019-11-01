@@ -44,21 +44,25 @@ const styles = {
   class ReduxExp extends React.Component {
     constructor(props) {
       super(props);
-      this.handleChange = this.handleChange.bind(this);
+      //this.handleChange = this.handleChange.bind(this);
     }
 
     state = {
       attack:"nada"
     }
 
+    //  handleChange(event, name) {
+    //   console.log('in handleChange')
+    //   const { target } = event;
+    //   const targetValue = event.target.value;
+    //   this.setState({
+    //     attack: targetValue
+    //   });
+    // }
 
-     handleChange(event, name) {
-      console.log('in handleChange')
-      const { target } = event;
-      const targetValue = event.target.value;
-      this.setState({
-        attack: targetValue
-      });
+    handleChange(value, name) {
+      console.log('inside handleChange', value.label)
+      this.setState({ attack: value.value });
     }
 
   render() { 
@@ -110,22 +114,24 @@ const styles = {
         ]
 
         const MySelect = () => (
-          <Select options={options} 
+          <Select options={options}
            //onChange={() => this.callDispatch}
-          //  onClick={() => this.handleChange()}
+           //onClick={() => this.handleChange()}
+          onChange={this.handleChange.bind(this)} 
           />
         )
 
     return (
       <div>
         <FormControl style={{ width: "300px", color: "green" }}>
-          <MySelect onChange={this.handleChange}/>
+          <MySelect/>
         </FormControl>
+        <br/>
         <FormControlLabel
           value="rval"
           style={{color:"black"}}
           control={<InputLabel color="primary" />}
-          label={'something'}
+          label={this.state.attack}
           //labelPlacement="end"
           //onClick={() => this.setState({ showA: false })}
         />
