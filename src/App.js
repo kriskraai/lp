@@ -1,23 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import ReduxExp from './Reducer'
+//import Select from 'react-select'
 
 function App() {
+  // const options = [
+  //   { value: 'chocolate', label: 'Chocolate' },
+  //   { value: 'strawberry', label: 'Strawberry' },
+  //   { value: 'vanilla', label: 'Vanilla' }
+  // ]
+  
+  // const MyComponent = () => (
+  //   <Select options={options} />
+  // )
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <MyComponent/> */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <ReduxExp/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
       </header>
     </div>
   );
