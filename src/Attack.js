@@ -1,8 +1,10 @@
 import React from "react";
-//import {createStore} from 'redux';
-import Reducer from './reducer'
+import {createStore} from 'redux';
+import xReducer from './reducer';
+
 //import FormControl from "@material-ui/core/FormControl";
 //import Select from 'react-select'
+
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import {
@@ -10,9 +12,9 @@ import {
   Select,
   MenuItem,
   InputLabel,
-  Input,
-  Grid,
-  FormHelperText
+  Input
+  // Grid,
+  // FormHelperText
 } from "@material-ui/core";
 
 const styles = {
@@ -67,6 +69,16 @@ const styles = {
     //   this.setState({ attack: value.value });
     // }
 
+  //  getStore() {
+  //   store.subscribe(() => {
+  //     return store.getState();
+  //   })
+  // }
+
+  // getStore() {
+  //   store.subscribe( store.getState() )
+  // }
+
     handleInput(event, name) {
       const { target } = event;
       this.setState(
@@ -88,43 +100,10 @@ const styles = {
     };
 
   render() { 
-        // //2. Reducer - State 
-        // // - Action
-        // const reducer = function(state, action) {
-          
-        //   if (action.type === "ATTACK"){
-        //   return action.payload
-        // }
-        //   if (action.type === "GREENATTACK"){
-        //   return action.payload
-        // }
-        //   return state;
-        // }
-        
-        // //1. Store - reducer (agent)
-        // //- state
-        // const store = createStore(reducer, "Peace")
-
-        // //3. Subscribe 
-        // store.subscribe(() => {
-        //   console.log("Store is now", store.getState())
-        // })
-
-        // //4. Dispatch (take action)
-        // switch(this.state.attack) {
-        //   case "ATTACK":
-        //     store.dispatch({type: "ATTACK", payload: "Iron Man"})
-        //     break;
-        //   case "GREENATTACK":
-        //     store.dispatch({type: "GREENATTACK", payload: "Hulk"})
-        //     break;
-        //   default:
-        //     store.dispatch({type: "NADA", payload: "nada"})
-        // }
 
     return (
       <div>
-        <Attack attk={this.state.attack}/>
+        <xReducer attk={this.state.attack}/>
         <FormControl style={{ width: "300px", color: "green" }}>
             <InputLabel shrink htmlFor="groups">
               My Groups
@@ -154,9 +133,11 @@ const styles = {
           value="rval"
           style={{color:"black"}}
           control={<InputLabel color="primary" />}
-          label={() => this.callDispatch}
+          // label={store.getState()}
+
+          //label={this.state.attack}
+
           //labelPlacement="end"
-          //onClick={() => this.setState({ showA: false })}
         />
       </div>
     )

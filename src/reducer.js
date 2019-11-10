@@ -1,7 +1,7 @@
 import React from "react";
 import {createStore} from 'redux';
 
-class Reducer extends React.Component {
+class xReducer extends React.Component {
     constructor(props) {
         super(props);
         //this.handleChange = this.handleChange.bind(this);
@@ -46,4 +46,4 @@ render() {
   }
 }
 
-export default Reducer;
+export default xReducer;
