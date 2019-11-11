@@ -1,9 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
 //import {createStore} from 'redux';
 //import Reducerx from './reducer';
 
 //import FormControl from "@material-ui/core/FormControl";
 //import Select from 'react-select'
+import { createCure } from "../../store/actions/cureActions";
 
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
@@ -69,9 +71,10 @@ const styles = {
         }),
         console.log('inside handleInput - ', event.target.value),
         this.setState({ attack: event.target.value })
-        //store.getState();
 
       );
+      var body = event.target.value;
+      this.props.createCure(body);
     };
 
   render() { 
@@ -114,4 +117,21 @@ const styles = {
    }
   }
 
-export default Attack;
+  const mapStateToProps = state => {
+    return {
+     CREATE_CURE: state.thoughts.CREATE_CURE
+    };
+  };
+
+  const mapDispatchToProps = dispatch => {
+    return {
+      createCure: params => dispatch(createCure(params))
+    };
+  };
+
+  export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(Attack);
+
+//export default Attack;
