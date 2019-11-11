@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Attack from './Attack'
+import Reducerx from './reducer'
 
 function App() {
   // const options = [
@@ -15,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        PLDP
+        Cures
         <p>
 
           <Attack/>

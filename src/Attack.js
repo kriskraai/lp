@@ -1,6 +1,6 @@
 import React from "react";
-import {createStore} from 'redux';
-import xReducer from './reducer';
+//import {createStore} from 'redux';
+//import Reducerx from './reducer';
 
 //import FormControl from "@material-ui/core/FormControl";
 //import Select from 'react-select'
@@ -55,30 +55,6 @@ const styles = {
       selectid: "id"
     }
 
-    //  handleChange(event, name) {
-    //   console.log('in handleChange')
-    //   const { target } = event;
-    //   const targetValue = event.target.value;
-    //   this.setState({
-    //     attack: targetValue
-    //   });
-    // }
-
-    // handleChange(value, name) {
-    //   console.log('inside handleChange', value.label)
-    //   this.setState({ attack: value.value });
-    // }
-
-  //  getStore() {
-  //   store.subscribe(() => {
-  //     return store.getState();
-  //   })
-  // }
-
-  // getStore() {
-  //   store.subscribe( store.getState() )
-  // }
-
     handleInput(event, name) {
       const { target } = event;
       this.setState(
@@ -91,11 +67,10 @@ const styles = {
           attackid: target.value.attackid,
           attackname: target.value.attackname
         }),
-        console.log('inside handleChange', event.target.value),
+        console.log('inside handleInput - ', event.target.value),
         this.setState({ attack: event.target.value })
-        // function() {
-        //   this.props.handleGroups(target.value.group_id, target.value.selectlabel);
-        // }
+        //store.getState();
+
       );
     };
 
@@ -103,28 +78,28 @@ const styles = {
 
     return (
       <div>
-        <xReducer attk={this.state.attack}/>
+       {/* <Reducerx dis={this.state.attack}/> */}
         <FormControl style={{ width: "300px", color: "green" }}>
-            <InputLabel shrink htmlFor="groups">
-              My Groups
+            <InputLabel shrink htmlFor="remedies">
+              My Remedy
             </InputLabel>
         <Select
               value={this.state.attack}
               displayEmpty
-              onChange={event => this.handleInput(event, "groups")}
-              input={<Input name="groups" id="groups" />}
+              onChange={event => this.handleInput(event, "remedies")}
+              input={<Input name="remedies" id="remedies" />}
               >
-                <MenuItem value="NADA">
+                <MenuItem value="Nothing">
                   <em>Select</em>
                 </MenuItem>
-                <MenuItem value="NADA">
+                <MenuItem value="Nothing">
                   <em>NOTHING</em>
                 </MenuItem>
-                <MenuItem value="ATTACK">
-                  <em>ATTACK</em>
+                <MenuItem value="Cold">
+                  <em>Cold</em>
                 </MenuItem>
-                <MenuItem value="GREENATTACK">
-                  <em>GREENATTACK</em>
+                <MenuItem value="Flu">
+                  <em>Flu</em>
                 </MenuItem>
               </Select>
         </FormControl>
@@ -133,16 +108,10 @@ const styles = {
           value="rval"
           style={{color:"black"}}
           control={<InputLabel color="primary" />}
-          // label={store.getState()}
-
-          //label={this.state.attack}
-
-          //labelPlacement="end"
         />
       </div>
     )
    }
   }
 
-//export default withStyles(styles)(ReduxExp);
 export default Attack;
