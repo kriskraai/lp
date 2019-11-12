@@ -8,7 +8,7 @@
 //   PLDP_THOUGHTS,
 //   CREATE_THOUGHT_SUCCESS,
 //   FILTERED_POST,
-//   SELECTED_GROUP_POSTS
+//       SELECTED_CURE_POSTS
 // } from "../actions/types";
 
 const initState = {
@@ -19,13 +19,20 @@ const initState = {
 
 const cureReducer = (state = initState, action) => {
   switch (action.type) {
-    case SELECTED_GROUP_POSTS:
+    case "cold":
       return {
         ...state,
         cure: action.cure,
-        type: SELECTED_GROUP_POSTS,
-        CREATE_CURE: ""
+        type: "", //SELECTED_CURE_POSTS,
+        CREATE_CURE: "Lemon and Honey"
       };
+      case "flu":
+        return {
+          ...state,
+          cure: action.cure,
+          type: "", //SELECTED_CURE_POSTS,
+          CREATE_CURE: "Anti-biotics"
+        };  
     default:
       return state;
   }

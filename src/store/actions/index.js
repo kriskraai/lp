@@ -1,5 +1,5 @@
 //=========
-import cureActions from './thoughtsActions';
+import cureActions from './cureActions';
 
 //=========
 export default {

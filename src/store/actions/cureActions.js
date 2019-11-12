@@ -1,7 +1,7 @@
 
 
 
-export const createThought = params => {
+export const createCure = params => {
    // set conditions for dispatch
     return (dispatch, getState) => {
         dispatch({

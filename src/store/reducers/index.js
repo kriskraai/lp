@@ -1,6 +1,7 @@
 import cureReducer from "./cureReducer";
 
-const rootReducer = combineReducers({
+const rootReducer = this.combineReducers({
+//const rootReducer = combineReducers({
     cure: cureReducer
     });
 

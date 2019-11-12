@@ -119,7 +119,7 @@ const styles = {
 
   const mapStateToProps = state => {
     return {
-     CREATE_CURE: state.thoughts.CREATE_CURE
+     CREATE_CURE: state.cure.CREATE_CURE
     };
   };
 
