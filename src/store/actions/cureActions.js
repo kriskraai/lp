@@ -1,6 +1,4 @@
 
-
-
 export const createCure = params => {
    // set conditions for dispatch
     return (dispatch, getState) => {
