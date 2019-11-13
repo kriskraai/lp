@@ -119,7 +119,8 @@ const styles = {
 
   const mapStateToProps = state => {
     return {
-     CREATE_CURE: state.cure.CREATE_CURE
+     CREATE_CURE: state.cure.CREATE_CURE,
+     userdata: state.userDialog.userDetails[0]
     };
   };
 

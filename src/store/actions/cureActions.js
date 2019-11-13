@@ -1,3 +1,15 @@
+import {
+  //   ORG_THOUGHTS,
+  //   ILEAD_THOUGHTS,
+  //   CORP_ILEAD_THOUGHTS,
+  //   GC_THOUGHTS,
+  //   DAILY_THOUGHTS,
+  //   MY_THOUGHTS,
+  //   PLDP_THOUGHTS,
+  //   CREATE_THOUGHT_SUCCESS,
+  //   FILTERED_POST,
+       SELECTED_CURE_POSTS
+  } from "./actions/types";
 
 export const createCure = params => {
    // set conditions for dispatch
