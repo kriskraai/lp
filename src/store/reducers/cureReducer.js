@@ -1,4 +1,4 @@
-// import {
+import {
 //   ORG_THOUGHTS,
 //   ILEAD_THOUGHTS,
 //   CORP_ILEAD_THOUGHTS,
@@ -9,7 +9,7 @@
 //   CREATE_THOUGHT_SUCCESS,
 //   FILTERED_POST,
 //       SELECTED_CURE_POSTS
-// } from "../actions/types";
+} from "../actions/types";
 
 const initState = {
   something: [],
