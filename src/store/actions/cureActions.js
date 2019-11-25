@@ -8,7 +8,7 @@ import {
   //   PLDP_THOUGHTS,
   //   CREATE_THOUGHT_SUCCESS,
   //   FILTERED_POST,
-       SELECTED_CURE_POSTS
+       SELECTED_CURE
   } from "./actions/types";
 
 export const createCure = params => {

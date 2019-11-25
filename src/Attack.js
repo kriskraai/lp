@@ -6,7 +6,6 @@ import { connect } from "react-redux";
 //import FormControl from "@material-ui/core/FormControl";
 //import Select from 'react-select'
 import { createCure } from "../../store/actions/cureActions";
-
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import {

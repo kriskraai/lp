@@ -3,7 +3,6 @@ import appReducer from "./reducers";
 import thunk from "redux-thunk";
 
 const initialState = {};
-
 const middleware = [thunk];
 
 const rootReducer = (state, action) => {
