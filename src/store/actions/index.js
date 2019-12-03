@@ -1,7 +1,7 @@
 //=========
-import cureActions from './cureActions';
+import counter from './counter';
 
 //=========
 export default {
-	cureActions,
+	counter,
 };
